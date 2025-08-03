@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruping tags</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            font-style: italic;
+        }
+
+        header{
+            border-color: bisque;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav{
+            background-color: rgb(117, 117, 117);
+            padding: 3px;
+            box-shadow: 3px 2px 7px 1px rgba(0, 0, 0, 0.363)
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover {
+            text-decoration:underline;
+        }   
+
+        main{
+            background-color: rgb(255, 255, 255);
+            color: #fff;
+            border-radius: 10px 2px;
+            padding: 5px;
+            margin: 20px;
+            box-shadow: 3px 2px 7px 1px rgba(0, 0, 0, 0.363)
+        }
+
+        section{
+            background-color: rgb(102, 101, 101);
+            font-weight: normal;
+        }
+
+        aside{
+            background-color: azure;
+            color: #000;
+        }
+
+        footer{
+            color: #fff;
+            background-color: #000;
+            text-align: center;
+            padding: 6px;
+        }
+        footer > p{
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <span>
+                <h1>Matéria da Etec</h1>
+            </span>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticia sobre quimica</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non blanditiis voluptatibus illo harum necessitatibus ex repudiandae porro laudantium quia? Sequi atque quaerat porro accusantium est tempore officia ex laudantium.</p>
+                <aside>
+                    <p>Artigo escrito por Joaquinha</p>
+                </aside>
+                <p>Tem como fazer borda com imagem</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rafael Nunes Cardoso</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+    <h1>Inserindo videos ospedados localmente</h1>
+
+    <div class="video1">
+        <p>Esse video está hospedado no meu servidor.</p>
+            <video width="500" height="281" poster="pato trofeu.jpg" controls loop>
+                <source src="video/Vencedor.mp4" type="video/mp4">
+                <source src="video/Vencedor.m4v" type="video/m4v">
+                <source src="video/Vencedor.webm" type="video/webm">
+                <source src="video/Vencedor.ogv" type="video/ogg">
+                <p>Seu navegador não tem compatibilidade.</p>
+                <!--Isso serve pq alguns navegadores não compativeis com os tipos de videos-->
+            </video>
+    </div>
+
+        <div class="video2">
+            <h2>Inserindo videos no Youtube</h2>
+            <iframe width="500" height="281" src="https://www.youtube.com/embed/1U4RLx47LGg?si=PKHUOokgrwE7V_EU" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!--Está ublico qualquer pessoa pode acessar-->
+        </div>
+
+        <div class="video3">
+            <h2>Inserindo videos do Vimeo</h2>
+            <iframe src="https://player.vimeo.com/video/184608459?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="500" height="281" frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Ecoinovar - Animação"></iframe>
+            <!--Quando pausa não mostra outros videos e a qualidade é melhor para o seu site-->
+        </div>
+        <div class="audio">
+            <h2>Inserindo audio</h2>
+            <audio src="video/audio.mp3" controls></audio>
+        </div>
+    </div>
+
+</body>
+</html>

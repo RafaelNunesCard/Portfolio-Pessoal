@@ -1,0 +1,44 @@
+body{
+    background-color: #fff;
+
+}
+
+video{
+    border-radius: 5%;
+}
+
+iframe{
+    border-radius: 5%;
+}
+
+.container{
+    align-items: center;
+    text-align: center;
+}
+
+.video1{
+    background-color: #eee;
+    border: solid black 5px;
+    border-radius: 10px;
+    width: 60vh;
+    height: 40vh;
+}
+
+.video2{
+    gap: 80px ;
+    background-color: #eee;
+    border: solid black 5px;
+    border-radius: 10px;
+    width: 60vh;
+    height: 40vh;
+}
+
+.video3{
+    background-color: #eee;
+    border: solid black 5px;
+    border-radius: 10px;
+    width: 60vh;
+    height: 40vh;
+}
+
+

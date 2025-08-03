@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holver</title>
+    <style>
+        /*
+        Simbologia CSS Seletores Pesonalizados
+            #  = ID
+            .  = Class
+            :  = Pseudo Class
+            :: = Pseudo Element
+            >  = Children
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p{
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de holver</h1>
+    <div>
+        Passe o mouse aqui!..
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>
