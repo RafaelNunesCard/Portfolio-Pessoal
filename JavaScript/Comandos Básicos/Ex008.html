@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Somadno Números</title>
+    <title>DETRAN</title>
     <style>
         body{
             font: normal 15pt Arial;
@@ -12,25 +12,27 @@
     </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
+    <h1>Sistemas de multas</h1>
 
-    <input type="number" name="n1" id="n1"> +
-    <input type="number" name="n2" id="n2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="number" name="vel" id="vel"> +
+    Velocidade do Carro <input type="button" value="Verificar" onclick="verificar()"> Km/h
 
     <div id="res">
         Resultado:
     </div>
     <script>
-        function somar(){
-            var tn1 = document.getElementById('n1')
-            var tn2 = document.getElementById('n2')
+        function verificar(){
+            var txtvel = document.getElementById('vel')
             var res = document.getElementById('res')
+            var vel = Number(txtvel.value)
 
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
-            res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
+            if (vel > 60){
+                res.innerHTML += '<p>Você foi <strong>MULTADO</strong> por andar acima de 60Km/h<p>'
+            }else{
+                res.innerHTML += '<p>Você está indo muito bem continue assim!<p>'
+            }
+
         }
     </script>
 </body>

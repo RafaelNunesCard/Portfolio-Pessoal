@@ -6,47 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Primeiros passos com DOM</title>
     <style>
-        body{
-            background: rgb(92, 125, 224);
+        #area{
+            font: normal 15pt Arial;
+            background: green;
             color: white;
-            font: normal 18pt Arial;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o Resultado</p>
-    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
-    <div id="msg">Clique em mim</div>
+    <div id="area">
+        Interaja...
+    </div>
     <script>
-        var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[0] // Pega o primeiro paragrafo que aparece
-        var msg = window.document.getElementById('msg')
+        var area = document.getElementById('area')
+        
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', saiu)
 
-        window.document.write(p1.innerText) //Pega o texto e mostra
-        window.document.write(p1.innerHTML) //Pega o código HTML e mostra
+        function clicar() {  
+            area.innerText = 'Clicou! ^-^'
+        }
 
-        msg.style.background = 'green'
-        msg.innerText = 'Estou aguardando...' //Troca o texto do item
+        function entrar() {
+            area.innerText = 'Só clicar'
+        }
 
-        //Selector
-        var d = document.querySelector('div#msg')
-
-        d.style.color = 'red'
-
-
-        /*
-        Por marca = getElementByTagName()
-        Por ID = getElementById()
-        Por Nome = getElementsByName()
-        Por Classe = getElementsByClassName()
-
-        Recomendada
-        Por seletor:
-        querySelector()
-        querySelectorAll() = Plural
-        */
+        function saiu() {
+            area.innerText = 'Pq não clicou? ;-;'
+        }
     </script>
 </body>
 </html>
