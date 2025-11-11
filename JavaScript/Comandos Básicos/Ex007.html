@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        #area{
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var area = document.getElementById('area')
+        
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', saiu)
+
+        function clicar() {  
+            area.innerText = 'Clicou! ^-^'
+        }
+
+        function entrar() {
+            area.innerText = 'Só clicar'
+        }
+
+        function saiu() {
+            area.innerText = 'Pq não clicou? ;-;'
+        }
+    </script>
+</body>
+</html>
