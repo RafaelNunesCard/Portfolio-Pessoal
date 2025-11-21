@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DESAFIO — DOM + API</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="text"
+      id="text"
+      placeholder="Digite um numero de 1-10"
+    />
+    <button onclick="carregar()">Carregar usuário!</button>
+    <p id="res"></p>
+
+    <script>
+      const armazem = [];
+      async function carregar() {
+        const id = document.getElementById("text").value;
+        const res = document.getElementById("res");
+
+        // Check if the ID is valid
+        if (id < 1 || id > 10 || id === "") {
+          res.textContent = "Você não escreveu um número válido!";
+          return;
+        }
+
+        // Check if the user has already been loaded
+        if (armazem.indexOf(id) != -1) {
+          res.textContent = "Esse usuário já foi carregado!";
+          return;
+        }
+
+        try {
+          res.innerHTML = "Carregando..."; // Initial loading message
+
+          const resposta = await fetch(
+            `https://jsonplaceholder.typicode.com/users/${id}`
+          );
+
+          if (!resposta.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const dados = await resposta.json();
+
+          res.innerHTML = `
+            <strong>Nome:</strong> ${dados.name} <br>
+            <strong>Cidade:</strong> ${dados.address.city} <br>
+            <strong>E-mail:</strong> ${dados.email}
+        `;
+
+          armazem.push(id);
+        } catch (error) {
+          res.innerHTML = "⛔ Deu erro ao carregar!";
+          console.error("Fetch error:", error);
+        }
+      }
+    </script>
+  </body>
+</html>
