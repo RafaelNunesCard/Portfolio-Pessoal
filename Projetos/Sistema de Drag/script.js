@@ -39,6 +39,7 @@ demoBox.addEventListener("pointermove", (e) => {
 
   // atualiza o span de preview
   span.textContent = previewCol;
+  demoBox.style.cursor = "grabbing"
 });
 
 function endDrag(e) {
@@ -65,6 +66,7 @@ function endDrag(e) {
   updateColumnNumber();
 
   demoBox.style.transform = "";
+  demoBox.style.cursor = "grab"
 }
 
 // pointerup no próprio demoBox (com pointer capture também funciona)
