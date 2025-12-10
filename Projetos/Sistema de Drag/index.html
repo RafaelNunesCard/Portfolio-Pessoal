@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        Range syntax in CSS
+        <span style="color: rgb(125, 63, 206)">if()</span> function
+      </h1>
+      <div class="aling">
+        <span class="alert">
+          <i class="ri-alert-line"></i>
+          <span>Requires Chrome 142+</span>
+        </span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="codes">
+        <div class="html">
+          <div class="divisao">
+            <p>HTML Markup</p>
+            <span class="span-html">HTML</span>
+          </div>
+          <div class="code">
+            <pre>
+  <span style="color: #c23f60;">&lt;div</span> <span style="color: rgb(151, 200, 255);">class</span>=<span style="color: rgb(121, 226, 121);">"item"</span>
+      <span style="color: rgb(151, 200, 255);">data-columns</span>=<span style="color: rgb(121, 226, 121);">"<span style="color: gold;" id="coluns">1</span>"</span><span style="color: #c23f60;">&gt;</span>
+      ...
+  <span style="color: #c23f60;">&lt;/div&gt;</span>
+                    </pre>
+          </div>
+        </div>
+        <div class="css">
+          <div class="divisao">
+            <p>CSS Source</p>
+            <span class="span-css">CSS</span>
+          </div>
+          <div class="code">
+            <pre>
+  <span style="color: #c23f60;">.item</span> {
+    <span style="color: rgb(151, 200, 255);">background-color:</span> <span style="color: rgb(202, 109, 255);">if</span>(
+    <span style="color: rgb(202, 109, 255);">style</span>(<span style="color: rgb(202, 109, 255);">attr</span>(<span style="color: rgb(224, 224, 224);">data-columns type(&lt;integer&gt;)</span>) <span class="especial" id="especial">> <span style="color: gold;">2</span></span>): <span style="color: rgb(121, 226, 121);">royalblue</span>; 
+    <span style="color: rgb(255, 137, 235);">else</span>: <span style="color: rgb(121, 226, 121);">dimgray</span>
+    );
+  }
+                      </pre>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="titles">
+          <h2>Interactive</h2>
+          <h2>Drag the block</h2>
+        </div>
+        <div class="condition">
+          <div class="aling">
+            <div class="light"></div>
+            <h3>Condition: col > 2</h3>
+          </div>
+          <div>
+            <h3 id="text">
+              <span style="color: #be123c">False</span> -> CSS applies dimgray
+            </h3>
+          </div>
+        </div>
+        <div class="drag" id="grid">
+          <div class="slots">
+            <div class="slot">1</div>
+            <div class="slot">2</div>
+            <div class="slot">3</div>
+            <div class="slot">4</div>
+            <div class="slot">5</div>
+          </div>
+          <div class="obj" id="box" data-columns="1">
+            <div>
+              <h2>DRAG ME</h2>
+              <p>.item</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
