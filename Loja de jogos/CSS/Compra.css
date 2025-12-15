@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color:  aliceblue;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.caixa{
+    text-align: center;
+    margin: 0 auto;
+}
+
+label, textarea{
+    display: block;
+}
+
+textarea{
+    margin: auto;
+    height: 100px;
+    width: 250px;
+    padding: 10px;
+}
+
+header{
+    font-size: 2vh;
+    background-color: #2980b9;
+    color: aliceblue;
+    width: 100% auto;
+    height: 50px;
+    padding: 22px;
+    font-size: 26px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+
+header a{
+    text-decoration: none;
+    color: aliceblue;
+}
+ 
+.caixa button {
+    width: 70px;
+    height: 50px;
+    background-color: #2980b9;
+    border-radius: 10%;
+    border: 2px solid #1c6699; 
+    color: white; 
+    font-size: 15px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.caixa button:hover {
+    background-color: #1c6699;
+    transform: scale(1.05);
+}
+
+#contatos{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none; 
+    z-index: 1000;
+}
+
+.carrinho{
+    position: absolute;
+    display: none;
+}
+
+.carrinho, table{
+    margin: 0;
+    border: 1px solid gray;
+    padding: 20px;
+    width: 49vh;
+    height: 38vh;
+}
+
+.carrinho, th,td{
+    text-align: left;
+}
+
+.total{
+    text-align: center;
+}
+
+
+#botão1{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão1:hover{
+    background-color: #1c6699;
+}
+
+#botão2{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão2:hover{
+    background-color: #1c6699;
+}
+
+#botão3{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão3:hover{
+    background-color: #1c6699;
+}
+
+#botão4{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão4:hover{
+    background-color: #1c6699;
+}
+
+#botão5{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão5:hover{
+    background-color: #1c6699;
+}
+
+#botão6{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão6:hover{
+    background-color: #1c6699;
+}
+
+#botão7{
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+}
+
+#botão7:hover{
+    background-color: #1c6699;
+}
+
+.comfirma{
+    display: flex;
+    text-align: center;
+}
+
+#comfirma{
+    text-align: center;
+    cursor: pointer;
+    height: 6vh;
+    width: 13vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2980b9;
+    font-size: 18px;
+}
+
+#comfirma:hover{
+    background-color: #1c6699;
+}
+
+#cancelar{
+    text-align: center;
+    cursor: pointer;
+    height: 6vh;
+    width: 13vh;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #b92929;
+    font-size: 18px;
+}
+#cancelar:hover{
+    background-color: #991c1c;
+}

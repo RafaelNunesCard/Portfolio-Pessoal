@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+:root{
+    --white-color: #ffffff;
+    --logo-color: #5d5d5d;
+    --gray-color: #F3F5F6;
+    --text-dark: #737380;
+    --text-dark2: #41414D;
+    --delete-color: #de3838;
+    --orange-color: #FFA585;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 34px 160px;
+}
+
+body{
+    background: #f4f4f4;
+}
