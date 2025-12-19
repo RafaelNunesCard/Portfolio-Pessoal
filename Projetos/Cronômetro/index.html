@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <input type="checkbox" name="a" id="a">
+    <div id="timer">
+        <div><input type="number" id="horaInput" placeholder="00">:<input type="number" id="minInput" placeholder="00">:<input type="number" id="segInput" placeholder="00"></div>
+        <h1><span id="hora">00</span>:<span id="min">00</span>:<span id="seg">00</span></h1>
+    </div>
+    <div>
+        <div class="control">
+            <label for="a"><i class="ri-pencil-line"></i></label>
+            <button onclick="resetar()"><i class="ri-stop-line"></i></button>
+            <button onclick="togglePlayPause()" id="playPause"><i class="ri-play-line"></i></button>
+        </div>
+        <div class="control">
+            <label for="a">
+                <i class="ri-close-fill"></i>
+            </label>
+            <label for="a" onclick="confirmar()">
+                <i class="ri-check-fill"></i>
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Audiowide", sans-serif;
+}
+
+body{
+    background-color: rgb(10, 13, 15);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-weight: 400;
+}
+
+input{
+    display: none;
+    font-size: 12rem;
+    width: 260px;
+    background: transparent;
+    border: none;
+    color: cyan;
+}
+
+input::placeholder{
+    color: cyan;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#timer{
+    color: cyan;
+    font-size: 6rem;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#timer div{
+    display: none;
+    font-size: 12rem;
+}
+
+#a:checked ~ #timer > h1{
+    display: none;
+}
+
+#a:checked ~ #timer  input,
+#a:checked ~ #timer > div{
+    display: flex;
+}
+
+.control{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.control:nth-child(2){
+    display: none;
+    gap: 80px;
+}
+
+.control:nth-child(2) label:nth-child(1){
+    color:rgb(161, 38, 38);
+}
+
+.control:nth-child(2) label:nth-child(2){
+    color:rgb(60, 205, 60);
+}
+
+button,
+label{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    font-size: 1.8rem;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 50%;
+    color: rgb(180, 180, 180);
+
+    width: 35px;
+    height: 35px;
+}
+
+#a:checked ~ div .control:nth-child(1){
+    display: none;
+}
+
+#a:checked ~ div .control:nth-child(2){
+    display: flex;
+}
