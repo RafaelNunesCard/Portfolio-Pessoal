@@ -2,6 +2,8 @@ let reshora = document.getElementById("hora")
 let resmin = document.getElementById("min")
 let resseg = document.getElementById("seg") 
 let plays = document.getElementById("playPause")
+let container = document.getElementById("container")
+let body = document.getElementById("body")
 
 let hora = ""
 let min = ""
@@ -31,7 +33,7 @@ function confirmar(){
 function play(){
     if(intervalo) return
     intervalo = setInterval(function(){
-        if(tempo > 0){
+        if(tempo > 10){
             
             let h = Math.floor(tempo / 3600)
             let m = Math.floor((tempo % 3600) / 60)
@@ -42,6 +44,19 @@ function play(){
             resmin.textContent = m < 10 ? "0" + m : m
             resseg.textContent = s < 10 ? "0" + s : s
             
+            --tempo
+        }else if(tempo >= 0){
+
+            let s = tempo % 60
+
+            if(tempo % 2 == 1){
+                body.classList.add("ativado")
+            }else{
+                body.classList.remove("ativado")
+            }
+            
+            container.textContent = s < 10 ? "0" + s : s
+
             --tempo
         } else {
             clearInterval(intervalo)
