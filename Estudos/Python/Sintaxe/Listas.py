@@ -22,7 +22,7 @@ coord = (10, 20)
 
 x, y = coord
 
-# Sets :=> coleção sem repetição:
+# Sets => coleção sem repetição:
 s = {1, 2, 3 , 3}
 print(s)  # {1,2,3}
 s.add(4)
