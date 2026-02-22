@@ -13,7 +13,7 @@ enum Estados {
 void main() {
   
   Telas tela = Telas.HomePage;
-  Estados estado = Estados.SP;
+  //Estados estado = Estados.SP;
   
   switch( tela ) {
       

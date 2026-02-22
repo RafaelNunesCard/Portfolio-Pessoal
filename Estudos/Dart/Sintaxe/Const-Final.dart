@@ -6,7 +6,7 @@ void main() {
 
   // final: você vai obter de fora
   // final int b = 2; 
-  final DataTime data = new DataTime.now();
+  final DateTime data = DateTime.now();
 
 
   print(data);

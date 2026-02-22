@@ -23,6 +23,6 @@ void main() {
   print( nome.toUpperCase() );
 
   if( nome.contains( 'Nunes' ) ) {
-    print( 'Comtém Nunes' )
+    print( 'Comtém Nunes' );
   }
 }

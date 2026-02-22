@@ -8,7 +8,7 @@ void main() {
   if(numero1 == numero2){
     print('Numero1 é igual ao numero2');
   }else if(numero1 < numero2){
-    print('Numero1 é menor que o numero2')
+    print('Numero1 é menor que o numero2');
   }else{
     print('Eles não são iguais');
   }
@@ -57,12 +57,12 @@ void main() {
 
 
   // Operador Ternário
-  bool condicao = true;
-  String nome = 'Daves';
+  //bool condicao = true;
+  //String nome = 'Daves';
 
-  print(condicao ? 'Condição Verdadeira' : 'Condição Falsa');
+  // print(condicao ? 'Condição Verdadeira' : 'Condição Falsa');
 
   print(2 < 3 ? 'Menor' : 'Maior');
 
-  String cliente = nome == 'Daves' ? 'Nome OK' : 'Nome Errado';
+  //String cliente = nome == 'Daves' ? 'Nome OK' : 'Nome Errado';
 }
