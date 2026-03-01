@@ -1,7 +1,7 @@
 package classebiblioteca;
 
 public class main {
-    public static void main(String() args) {
+    public static void main(String[] args) {
         Biblioteca biblioteca1 = new Biblioteca();
         
         biblioteca1.adicionarLivro("Codigo Limpo", "Robert C. Martin");
@@ -10,6 +10,8 @@ public class main {
         
         
         biblioteca1.casdastrarUsuario("Derek");
+
+        biblioteca.emprestarLivro(usuario, livro);
         
         biblioteca1.listarLivrosDisponiveis();
         biblioteca1.listarLivrosEmprestados();

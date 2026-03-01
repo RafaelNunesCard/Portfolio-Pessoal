@@ -2,7 +2,7 @@ package classecalculadora;
 
 public class ExemploCalculadora {
     public static void main(String[] args) {
-        Calculadora calculadora1 = new Calculadora;
+        Calculadora calculadora1 = new Calculadora();
 
         calculadora1.somar(1,3);        //  4
         calculadora1.subtrair(4, 2);    //  2

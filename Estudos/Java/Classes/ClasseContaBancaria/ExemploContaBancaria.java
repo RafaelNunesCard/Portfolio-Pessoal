@@ -2,7 +2,7 @@ package classecontabancaria;
 
 public class ExemploContaBancaria {
     public static void main(String[] args) {
-        ContaBancaria conta1 = new ContaBancaria;
+        ContaBancaria conta1 = new ContaBancaria();
 
         conta1.titular = "Rafael";
         conta1.saldo = 0;
