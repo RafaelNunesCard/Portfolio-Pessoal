@@ -4,6 +4,13 @@ void main() {
   runApp(MyApp());
 }
 
+class Argumentos {
+  final int id;
+  final String nome;
+
+  Argumentos(this.id, this.nome);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,7 +22,8 @@ class MyApp extends StatelessWidget {
 
       routes: {
         '/': (context) => Tela1(),
-        '/tela2': (context) => Tela2(),
+        Tela2.routeName: (context) => Tela2,
+        //'/tela2': (context) => Tela2( ),
         '/tela2/tela3': (context) => Tela3(),
       },
     );
@@ -24,6 +32,8 @@ class MyApp extends StatelessWidget {
 
 class Tela1 extends StatelessWidget {
   const Tela1({super.key});
+  int valor = 1;
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +49,9 @@ class Tela1 extends StatelessWidget {
               onPressed: () {
                 print('Clicou no botão da tela 1');
 
-                Navigator.pushNamed(context, '/tela2');
-
+                Navigator.pushNamed(context, '/tela2', 
+                arguments: argumentos(valor, "Rafael $valor" ));
+                valor++;
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(builder: (context) {
@@ -58,15 +69,21 @@ class Tela1 extends StatelessWidget {
 }
 
 class Tela2 extends StatelessWidget {
+
+  static const routeName =  "/tela2";
+
   const Tela2({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final argumentos = ModalRoute.of(context).settings.arguments as Argumentos;
+
     return Container(
       child: MaterialApp(
         home: Scaffold(
           appBar: AppBar(
-            title: Text('Tela 2'),
+            title: Text('Tela 2' + argumentos.nome),
             backgroundColor: Colors.redAccent,
           ),
           body: Center(
