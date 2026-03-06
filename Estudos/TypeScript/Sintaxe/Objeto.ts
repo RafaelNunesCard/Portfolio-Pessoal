@@ -8,6 +8,11 @@
     }
     */
 
+    let pessoa: object = {
+        nome: "Rafael",
+        idade: 16
+    };
+
     interface usuario {
         nome: String;
         idade: number;

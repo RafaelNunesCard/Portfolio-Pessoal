@@ -4,9 +4,16 @@ let nomes: String[] = ["Rafael", "Marcos", "Cauã"];
 
 let frutas: Array<String> = ["maçã","banana"];
 
+// tuple = tamanho e tipos fixos 
+let usuario: [String, number];
+
+usuario = ["Rafael", 20];
+
+
 for(let nome of nomes) {
     console.log(nome);
 }
+
 
 let dobros = numeros.map(n => n * 2 );
 console.log(dobros);
