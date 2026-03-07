@@ -5,10 +5,10 @@ type User = {
     idade: number
 }
 
-function atualizarUsuario(id: number, dados: Partial<User>) {
+function atualizarUsuario(id: number, dados: Partial<Omit<User, "id">>) {
     const usuarioAtualizado: Partial<User> = {
         id: id,
-        ...dados
+        ...dados // spread operator: Ele pega os dados enviados e junta
     }
 
     console.log(usuarioAtualizado);
