@@ -9,13 +9,11 @@
 
     // : unknown
     let dado: unknown = "texto";
-
     let vazio: null = null; // : null = vazio
     let indefinido: undefined = undefined; // : undefined = indefinido
 
     // const : não muda igual JS
     const imutavel: String = "imutavel";
-
 
     // Union Types
     let id: number | String;
