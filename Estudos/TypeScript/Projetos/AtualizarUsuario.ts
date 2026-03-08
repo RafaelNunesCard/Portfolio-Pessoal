@@ -8,7 +8,7 @@ type User = {
 function atualizarUsuario(id: number, dados: Partial<Omit<User, "id">>) {
     const usuarioAtualizado: Partial<User> = {
         id: id,
-        ...dados // spread operator: Ele pega os dados enviados e junta
+        ...dados // spread operator: Ele pega os dados enviados e junta 
     }
 
     console.log(usuarioAtualizado);
