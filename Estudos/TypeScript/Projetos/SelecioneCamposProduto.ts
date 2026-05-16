@@ -7,7 +7,7 @@ type Produto2 = {
 }
 
 type ProdutoSemFornecedor = Omit<Produto2, "fornecedor"> 
-let ProdutoSemFornecedor = {
+let produtoSemFornecedor: ProdutoSemFornecedor = {
     id: 1,
     nome: "mouse",
     preco: 200,
@@ -15,7 +15,7 @@ let ProdutoSemFornecedor = {
 }
 
 type ProdutoCarrinho = Pick<Produto2, "nome" | "preco">
-let ProdutoCarrinho = {
+let produtoCarrinho: ProdutoCarrinho = {
     nome: "mouse",
     preco: 200
 }

@@ -1,5 +1,5 @@
 // String 
-let texto: String = "Olá mundo";
+let texto: string = "Olá mundo";
 
 console.log(texto.length);
 console.log(texto.toUpperCase());
