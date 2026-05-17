@@ -17,11 +17,23 @@ const usuario = {
     ativo: true
 }
 
-mostrarUsuario(usuario);
+const usuario2 = {
+    id: 2,
+    nome: "Maria",
+    idade: 25,
+    email: "maria@gmail.com",
+    ativo: true
+}
+
+cadastrarUsuario(usuario);
+cadastrarUsuario(usuario2);
+listarUsuarios();
+removerUsuario(2);
+listarUsuarios();
 
 function cadastrarUsuario(user: Usuario) {
     usuarios.push(user);
-    console.log("Usuario cadastrado com sucesso!");
+    console.log(`Usuario ${user.nome} cadastrado com sucesso!`);
 }
 
 function removerUsuario(id: number) {
@@ -37,10 +49,10 @@ function removerUsuario(id: number) {
 function listarUsuarios() {
     console.log("Lista de usuarios:");
     usuarios.forEach((user) => {
-        console.log(`Nome: ${user.nome}  Email:(${user.email})`);
+        mostrarUsuario(user);
     });
 }
 
 function mostrarUsuario(user: Usuario) {
-    console.log(`Usuario ${user.nome} tem ${user.idade} anos e está ${user.ativo? "ativo" : "não ativo"}`);
+    console.log(`${user.id} - Usuario ${user.nome} tem ${user.idade} anos e está ${user.ativo? "ativo" : "não ativo"}`);
 }
